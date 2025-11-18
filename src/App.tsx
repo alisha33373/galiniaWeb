@@ -149,12 +149,9 @@ function Footer() {
 }
 
 function App() {
-  const location = useLocation();
-  const showNavigation = location.pathname === '/';
-  
   return (
     <div className="app-container">
-      {showNavigation && <Navigation />}
+      <Navigation />
       <main className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -162,7 +159,7 @@ function App() {
           <Route path="/terms" element={<Terms />} />
         </Routes>
       </main>
-      {showNavigation && <Footer />}
+      <Footer />
     </div>
   );
 }
